@@ -5,7 +5,6 @@
 </head>
 <body>
     <script>
-        // Ask the user to enter how many courses they finished
         var input = prompt("How many courses did you finish?", "0");
         var numOfCourses = parseInt(input, 10);
 
@@ -14,18 +13,16 @@
         } else {
             document.write("<p>You finished " + numOfCourses + " courses.</p>");
 
-            // Declare an empty array to store course marks
             var courseMarks = [];
 
-            // Loop to collect course marks and find the total
-            var totalMarks = 0; // Initialize total to 0
+            var totalMarks = 0; 
             for (var i = 1; i <= numOfCourses; i++) {
                 var mark = prompt("Enter mark for course " + i + ":");
                 var numericMark = parseFloat(mark);
 
                 if (!isNaN(numericMark)) {
-                    courseMarks.push(numericMark); // Add the mark to the array
-                    totalMarks += numericMark; // Add the mark to the total
+                    courseMarks.push(numericMark);
+                    totalMarks += numericMark;
                 } else {
                     document.write("<p>Invalid mark entered for course " + i + "!</p>");
                     break; // Stop the loop if an invalid mark is entered
@@ -54,7 +51,6 @@
                 document.write("Sorry, all the marks have to be from minimum 0 to maximum 100!</p>");
             }
 
-            // Continue with the rest of your code here
         }
     </script>
 </body>
